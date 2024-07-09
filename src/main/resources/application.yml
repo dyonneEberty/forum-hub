@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: forumhub
+
+  datasource:
+    url: jdbc:postgresql://${DB_HOST}/forumhub
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+    format-sql: true
+
+server:
+  error:
+    include-stacktrace: never
+
+api:
+  security:
+    token:
+      secret: ${JWT_SECRET:010203}
+
+hibernate:
+  dialect: org.hibernate.dialect.HSQLDialect
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+  info:
+    title: Projeto Fórum HUB
+    description: >
+      O FórumHub é uma API REST desenvolvida em Java utilizando Spring Boot, que simula um fórum de discussão. Nesta API, os usuários podem criar, visualizar, atualizar e deletar tópicos de discussão, perfis, respostas, cursos e usuários. A partir de agora, apenas usuários autenticados podem interagir com a API.
+    version: 1.0.0
+    termsOfService: https://github.com/dyonneEberty/forum-hub
+    contact:
+      name: Dyonne Cunha
+      url: https://github.com/dyonneEberty
