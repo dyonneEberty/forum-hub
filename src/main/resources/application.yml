@@ -3,10 +3,10 @@ spring:
     name: forumhub
 
   datasource:
-    url: jdbc:postgresql://${DB_HOST}/forumhub
+    url: jdbc:mysql://${DB_HOST}/forumhub
     username: ${DB_USER}
     password: ${DB_PASSWORD}
-    driver-class-name: org.postgresql.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
     hibernate:
