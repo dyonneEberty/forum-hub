@@ -24,3 +24,7 @@ O Forum Hub permite que o usuário tenha acesso, cadastre, edite e exclua regist
 - Cadastro  de tópicos.
 - Edição no registro de tópicos.
 - Exclusão lógica do registro de tópicos.
+
+## Badge
+Indica que terminei o desafio.
+![Badge-Spring](https://github.com/user-attachments/assets/55da7d68-888b-4a53-86b9-e375ef7c1d9e)
