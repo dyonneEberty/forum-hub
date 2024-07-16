@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: forumhub
+
+  datasource:
+    url: jdbc:mysql://${DB_HOST}/forumhub
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+    format-sql: true
+
+server:
+  error:
+    include-stacktrace: never
+
+api:
+  security:
+    token:
+      secret: ${JWT_SECRET:010203}
+
+hibernate:
+  dialect: org.hibernate.dialect.HSQLDialect
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+  info:
+    title: Projeto F�rum HUB
+    description: >
+      O F�rumHub � uma API REST desenvolvida em Java utilizando Spring Boot, que simula um f�rum de discuss�o. Nesta API, os usu�rios podem criar, visualizar, atualizar e deletar t�picos de discuss�o, perfis, respostas, cursos e usu�rios. A partir de agora, apenas usu�rios autenticados podem interagir com a API.
+    version: 1.0.0
+    termsOfService: https://github.com/dyonneEberty/forum-hub
+    contact:
+      name: Dyonne Cunha
+      url: https://github.com/dyonneEberty

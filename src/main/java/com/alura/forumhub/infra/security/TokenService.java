@@ -25,7 +25,7 @@ public class TokenService {
             Algorithm algorithm = Algorithm.HMAC256(secret);
             String token = JWT.create()
                     .withIssuer("forumhub") // application identification | sender
-                    .withSubject(user.getName()) // saves the user login in the Token, for identification in the request
+                    .withSubject(user.getLogin()) // saves the user login in the Token, for identification in the request
                     .withExpiresAt(genExpirationData()) // expiration time
                     .sign(algorithm); // make the signature and final generation
             return token;
